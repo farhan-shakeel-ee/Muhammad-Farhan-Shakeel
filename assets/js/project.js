@@ -67,6 +67,10 @@ const params = new URLSearchParams(
 
 const projectID = params.get("id");
 
+function imagePath(project, file){
+    return `${CONFIG.ROOT}${project.folder}/${file}`.replace(/\.png$/i, ".webp");
+}
+
 function proseBlocks(text){
     const normalized = String(text || "").replace(/([a-z0-9])([A-Z])/g, "$1 $2");
     return normalized.split(/(?<=[.!?])\s+/).filter(Boolean).map(paragraph => `<p>${paragraph.trim()}</p>`).join("");
@@ -152,7 +156,7 @@ function buildProjectVideo(project){
                 <p>Watch the project demonstration and see the system in operation.</p>
             </div>
             <div class="project-video-frame">
-                <video controls preload="metadata" poster="${CONFIG.ROOT}${project.folder}/${project.cover || project.hero}">
+                <video controls preload="metadata" poster="${imagePath(project, project.cover || project.hero)}">
                     ${sourceMarkup}
                     Your browser does not support embedded video.
                 </video>
@@ -234,7 +238,11 @@ Github
 
 <img
 
-src="assets/projects/${project.folder}/${project.hero}"
+src="${imagePath(project, project.hero)}"
+
+fetchpriority="high"
+
+decoding="async"
 
 >
 
@@ -309,7 +317,9 @@ function buildGallery(project){
 
                     decoding="async"
 
-                    src="assets/projects/${project.folder}/${image}"
+                    fetchpriority="low"
+
+                    src="${imagePath(project, image)}"
 
                     alt="${project.title}"
 

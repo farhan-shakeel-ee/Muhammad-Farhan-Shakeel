@@ -71,7 +71,8 @@ function initializeTheme() {
     const toggle = document.querySelector(".theme-toggle");
     if (!toggle) return;
     const savedTheme = localStorage.getItem("portfolio-theme");
-    if (savedTheme === "dark") document.body.classList.add("dark-mode");
+    // Dark is the first-visit default. A visitor's explicit choice always wins.
+    if (savedTheme !== "light") document.body.classList.add("dark-mode");
     document.documentElement.classList.remove("dark-mode-preload");
 
     const updateToggle = () => {

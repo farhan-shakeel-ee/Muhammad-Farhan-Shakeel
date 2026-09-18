@@ -129,21 +129,12 @@ async function loadProjects(){
 
         const folders = response.projects.map(p => p.folder);
 
-        const loadedProjects = [];
-
-        for(const folder of folders){
-
-            const data = await Helpers.getJSON(
-
-                `${CONFIG.PROJECTS_PATH}${folder}/data.json`
-
-            );
-
+        // Independent requests should not wait for one another on a slow host.
+        const loadedProjects = await Promise.all(folders.map(async folder => {
+            const data = await Helpers.getJSON(`${CONFIG.PROJECTS_PATH}${folder}/data.json`);
             data.folder = folder;
-
-            loadedProjects.push(data);
-
-        }
+            return data;
+        }));
 
         ProjectApp.projects = loadedProjects;
 
@@ -396,7 +387,7 @@ initializePortfolio();
 
 function projectPath(project, file){
 
-    return `${CONFIG.PROJECTS_PATH}${project.folder}/${file}`;
+    return `${CONFIG.PROJECTS_PATH}${project.folder}/${file}`.replace(/\.png$/i, ".webp");
 
 }
 
@@ -501,6 +492,10 @@ function createProjectCard(project){
 
             loading="lazy"
 
+            decoding="async"
+
+            fetchpriority="low"
+
             src="${projectPath(project,project.cover)}"
 
             alt="${project.title}"
@@ -579,6 +574,12 @@ function renderFeaturedProject(){
 <div class="featured-image">
 
 <img
+
+loading="eager"
+
+fetchpriority="high"
+
+decoding="async"
 
 src="${projectPath(project,project.hero)}"
 
@@ -816,7 +817,6 @@ document.addEventListener(
 true
 
 );
-
 
 
 

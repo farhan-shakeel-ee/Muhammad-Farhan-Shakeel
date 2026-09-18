@@ -10,6 +10,8 @@ const App = {
 
         this.cacheDOM();
 
+        this.initPerformance();
+
         const siteScript = document.createElement("script");
         siteScript.src = "assets/js/site.js";
         document.head.appendChild(siteScript);
@@ -482,6 +484,22 @@ this.bar.style.width=value+"%";
 
 };
 
+// Warm same-site pages after rendering and cache files after the first visit.
+App.initPerformance=function(){
+    if("serviceWorker" in navigator){
+        navigator.serviceWorker.register("sw.js").catch(()=>{});
+    }
+
+    const warmNavigation=()=>{
+        ["about.html", "projects.html", "skills.html", "research.html", "contact.html"]
+            .filter(path=>!location.pathname.endsWith(path))
+            .forEach(path=>fetch(path, { priority:"low" }).catch(()=>{}));
+    };
+
+    if("requestIdleCallback" in window) requestIdleCallback(warmNavigation, { timeout:3000 });
+    else setTimeout(warmNavigation, 1500);
+};
+
 
 
 App.initParticles=function(){
@@ -597,6 +615,5 @@ animate
 animate();
 
 };
-
 
 
