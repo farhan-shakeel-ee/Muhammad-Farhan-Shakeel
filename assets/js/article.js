@@ -17,6 +17,6 @@ fetch("assets/data/articles.json")
         }).join("");
         const download = article.article_pdf ? `<a class="article-download" href="${article.article_pdf}" download><span aria-hidden="true">↓</span> Download PDF</a>` : "";
         document.title = `${article.title} | Farhan Portfolio`;
-        articleRoot.innerHTML = `<div class="article-reader-top"><a class="article-back" href="articles.html" aria-label="Back to articles" title="Back to articles">&larr;</a>${download}</div><div class="article-meta"><span>${article.category}</span><span>${article.readTime}</span></div><h1>${article.title}</h1><p class="article-byline">${article.readTime}</p><div class="article-summary"><span>Article summary</span><p>${article.summary}</p></div><div class="article-body article-content-list">${bodyContent}</div>`;
+        articleRoot.innerHTML = `<div class="article-reader-top"><a class="article-back" href="articles.html" aria-label="Back to all articles"><span aria-hidden="true">←</span><span>All articles</span></a>${download}</div><div class="article-meta"><span>${article.category}</span><span>${article.readTime}</span></div><h1>${article.title}</h1><p class="article-byline">${article.readTime}</p><div class="article-summary"><span>Article summary</span><p>${article.summary}</p></div><div class="article-body article-content-list">${bodyContent}</div>`;
     })
     .catch(() => { articleRoot.innerHTML = `<p class="article-empty">This article could not be loaded.</p>`; });

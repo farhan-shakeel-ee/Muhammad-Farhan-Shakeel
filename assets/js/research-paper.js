@@ -27,7 +27,7 @@ fetch("assets/data/research.json")
         document.title = `${paper.title} | Research | Farhan Portfolio`;
         paperRoot.innerHTML = `
             <div class="article-reader-top research-actions">
-                <a class="article-back" href="research.html" aria-label="Back to research" title="Back to research">&larr;</a>
+                <a class="article-back" href="research.html" aria-label="Back to all research"><span aria-hidden="true">←</span><span>All research</span></a>
                 <div class="research-paper-actions">${readButton}${download}</div>
             </div>
             <div class="article-meta"><span>${paper.category}</span><span>${paper.date}</span></div>

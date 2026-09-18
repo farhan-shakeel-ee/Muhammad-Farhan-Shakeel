@@ -12,7 +12,7 @@ fetch("assets/data/certificates.json")
         document.title = `${item.title} | Farhan Portfolio`;
         certificateRoot.innerHTML = `
             <div class="article-reader-top">
-                <a class="article-back" href="index.html#certificates" aria-label="Back to certificates" title="Back to certificates">&larr;</a>
+                <a class="article-back" href="index.html#certificates" aria-label="Back to certificates"><span aria-hidden="true">←</span><span>Certificates</span></a>
                 ${documentLink}
             </div>
             <div class="article-meta"><span>${item.type}</span><span>${item.date}</span></div>

@@ -242,10 +242,10 @@ body.dark-mode .contact-form option { background:#111714; color:#edf3ed; }
 .article-card p, .article-summary, .article-body p { color:var(--muted-ink) !important; }
 .article-meta { display:flex; justify-content:space-between; gap:12px; color:var(--green); font:.65rem var(--mono); text-transform:uppercase; letter-spacing:.06em; }
 .article-link { display:inline-block; margin-top:18px; color:var(--green) !important; font:.7rem var(--mono); text-transform:uppercase; }
-.article-back { display:inline-grid; place-items:center; width:58px; height:58px; margin-top:18px; color:var(--green) !important; font:700 2.3rem/1 var(--sans); text-decoration:none; }
-.article-back:hover, .article-back:focus-visible { color:var(--green) !important; background:var(--green-soft); outline:2px solid var(--green); outline-offset:4px; }
-body.dark-mode .article-back { color:#fff !important; }
-body.dark-mode .article-back:hover, body.dark-mode .article-back:focus-visible { color:#fff !important; outline-color:#fff; }
+.article-back { display:inline-flex; align-items:center; gap:8px; width:auto; min-height:38px; box-sizing:border-box; margin-top:18px; padding:8px 12px; border:1px solid var(--line); color:var(--ink) !important; background:transparent; font:.68rem/1 var(--mono); letter-spacing:.06em; text-decoration:none; text-transform:uppercase; transition:background .2s ease, border-color .2s ease, color .2s ease, transform .2s ease; }
+.article-back > span:first-child { color:var(--green); font:1.15rem/1 var(--sans); transition:transform .2s ease; }
+.article-back:hover, .article-back:focus-visible { border-color:var(--green); color:#fff !important; background:var(--green); outline:none; transform:translateX(-2px); }
+.article-back:hover > span:first-child, .article-back:focus-visible > span:first-child { color:#fff; transform:translateX(-2px); }
 .article-empty { color:var(--muted-ink); }
 .article-reader { max-width:980px; position:relative; }
 .article-reader-top { display:flex; align-items:center; justify-content:space-between; gap:24px; margin-bottom:34px; }
