@@ -41,6 +41,13 @@ body {
     color: var(--ink) !important;
     font-family: var(--sans) !important;
     line-height: 1.65;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 150ms ease-out, transform 150ms ease-out;
+}
+body.page-leaving { opacity: 0; transform: translateY(4px); pointer-events: none; }
+@media (prefers-reduced-motion: reduce) {
+    body { transition: none; }
 }
 body::before, body::after, .background-animation, #particles, #loader, .progress-bar { display:none !important; }
 .container { width:min(1120px, calc(100% - 48px)); max-width:none; margin:auto; }
