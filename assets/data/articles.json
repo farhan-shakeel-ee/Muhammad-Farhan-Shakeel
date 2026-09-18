@@ -6,8 +6,8 @@
     "title": "Designing Reliable Electronics Prototypes",
     "summary": "A practical workflow for moving from a circuit idea to a tested, documented prototype.",
     "images": [
-      "assets/projects/Memory_Controller/gallery/2.png",
-      "assets/projects/Memory_Controller/gallery/3.png"
+      "assets/projects/Memory_Controller/gallery/2.webp",
+      "assets/projects/Memory_Controller/gallery/3.webp"
     ],
     "body": [
       "A reliable prototype starts with a clear boundary: define the inputs, outputs, power requirements, and failure conditions before choosing components.",
@@ -23,8 +23,8 @@
     "title": "Learning Through Real Engineering Projects",
     "summary": "Why small, complete builds create deeper technical understanding than isolated tutorials.",
     "images": [
-      "assets/projects/Memory_Controller/gallery/4.png",
-      "assets/projects/Memory_Controller/gallery/5.png"
+      "assets/projects/Memory_Controller/gallery/4.webp",
+      "assets/projects/Memory_Controller/gallery/5.webp"
     ],
     "body": [
       "Projects create useful constraints. They force hardware, software, documentation, and testing to work together instead of leaving knowledge in separate lessons.",
@@ -40,8 +40,8 @@
     "title": "Notes on Digital Systems and Interfaces",
     "summary": "The design habits that make UART, SPI, I2C, and memory-controller work easier to reason about.",
     "images": [
-      "assets/projects/Memory_Controller/gallery/6.png",
-      "assets/projects/Memory_Controller/gallery/7.png"
+      "assets/projects/Memory_Controller/gallery/6.webp",
+      "assets/projects/Memory_Controller/gallery/7.webp"
     ],
     "body": [
       "Digital interfaces become easier to debug when timing, ownership, and reset behavior are written down before implementation.",

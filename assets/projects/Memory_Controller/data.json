@@ -6,8 +6,8 @@
     "Computer Architecture"
   ],
   "featured": true,
-  "cover": "gallery/cover.png",
-  "hero": "gallery/cover.png",
+  "cover": "gallery/cover.webp",
+  "hero": "gallery/cover.webp",
   "heroVideo": "gallery/111.webm",
 
   "description": "This project implements a UART-based Memory Controller on an Artix-7 FPGA using SystemVerilog. The system enables a computer to communicate with on-chip memory through a serial UART interface. A laptop is connected to the FPGA via UART, and PuTTY is used as the serial terminal to send commands and display responses.The received UART data is first stored in an RX FIFO buffer, which prevents data loss when bytes arrive faster than the memory controller can process them. Likewise, data transmitted back to the laptop is temporarily stored in a TX FIFO buffer, ensuring smooth and reliable communication.At the core of the design is a Finite State Machine (FSM)-based Memory Controller, which interprets incoming commands and controls all memory operations. The protocol uses a simple control bit:1 → Write Operation: The received data is written to the specified memory address.0 → Read Operation: Data is read from the specified memory address and transmitted back to the laptop through the UART interface.The FSM manages the complete sequence of operations, including command decoding, address processing, memory read/write control, FIFO handshaking, and UART data transfer. This ensures synchronized and error-free communication between the UART interface and the memory.Overall, the project demonstrates a modular FPGA architecture consisting of:UART Receiver and Transmitter for serial communication.RX and TX FIFO Buffers for reliable data buffering.FSM-Based Memory Controller for command execution and memory access.Memory Module for storing and retrieving data.The complete system provides a simple and efficient method for controlling memory from a PC through PuTTY, making it suitable for FPGA learning, embedded communication, and memory interface applications.",
@@ -71,14 +71,14 @@
   ],
 
   "gallery": [
-    "gallery/1.png",
-    "gallery/2.png",
-    "gallery/3.png",
-    "gallery/4.png",
-    "gallery/5.png",
-    "gallery/6.png",
-    "gallery/7.png",
-    "gallery/8.png"
+    "gallery/1.webp",
+    "gallery/2.webp",
+    "gallery/3.webp",
+    "gallery/4.webp",
+    "gallery/5.webp",
+    "gallery/6.webp",
+    "gallery/7.webp",
+    "gallery/8.webp"
   ],
 
   "videos": [

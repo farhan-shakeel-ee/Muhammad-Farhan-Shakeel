@@ -7,8 +7,8 @@
     "Embedded Systems"
   ],
   "featured": true,
-  "cover": "gallery/cover.png",
-  "hero": "gallery/1.png",
+  "cover": "gallery/cover.webp",
+  "hero": "gallery/1.webp",
 
   "description": "A complete esp32-based smart home automation system that allows users to control appliances remotely using Wi-Fi, bluetooth, and motion sensors.",
 
@@ -24,9 +24,9 @@
   ],
 
   "gallery": [
-    "gallery/cover.png",
-    "gallery/2.png",
-    "gallery/3.png"
+    "gallery/cover.webp",
+    "gallery/2.webp",
+    "gallery/3.webp"
   ],
 
   "videos": [
