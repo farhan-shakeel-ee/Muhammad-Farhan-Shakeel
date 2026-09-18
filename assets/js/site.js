@@ -113,16 +113,39 @@ function initializePageTransitions() {
 }
 
 function renderFooter() {
-    if (document.querySelector("footer")) return;
-    const footer = document.createElement("footer");
+    const footer = document.querySelector("footer") || document.createElement("footer");
+    footer.className = "site-footer";
     footer.innerHTML = `
-        <div class="container site-footer-inner">
-            <div><strong>${SITE.brand}</strong><p>Electrical engineering, embedded systems, digital design, and practical software.</p></div>
-            <div><span class="footer-label">Navigate</span><nav>${SITE.links.slice(0, 6).map(([label, href]) => `<a href="${href}">${label}</a>`).join("")}</nav></div>
-            <div><span class="footer-label">Get in touch</span><a href="mailto:${SITE.contact.email}">${SITE.contact.email}</a><a href="tel:${SITE.contact.phone}">${SITE.contact.phone}</a><a href="${SITE.contact.whatsapp}">WhatsApp</a></div>
+        <div class="container footer-cta">
+            <div>
+                <span class="footer-label">Open to collaboration</span>
+                <h2>Let’s build something meaningful.</h2>
+            </div>
+            <a class="footer-cta-link" href="contact.html">Start a conversation <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="container site-footer-bottom">&copy; ${new Date().getFullYear()} ${SITE.brand}</div>`;
-    document.body.appendChild(footer);
+        <div class="container site-footer-inner">
+            <section class="footer-brand">
+                <a class="footer-brand-name" href="index.html">${SITE.brand}</a>
+                <p>Turning ambitious ideas into reliable embedded, digital, and intelligent systems.</p>
+                <span class="footer-status"><i aria-hidden="true"></i> Available for selected projects</span>
+            </section>
+            <section class="footer-links">
+                <span class="footer-label">Explore</span>
+                <nav>${SITE.links.map(([label, href]) => `<a href="${href}">${label}</a>`).join("")}</nav>
+            </section>
+            <section class="footer-expertise">
+                <span class="footer-label">Focus areas</span>
+                <ul><li>Embedded systems</li><li>Digital & VLSI design</li><li>IoT solutions</li><li>Applied machine learning</li></ul>
+            </section>
+            <section class="footer-connect">
+                <span class="footer-label">Connect</span>
+                <a class="footer-email" href="mailto:${SITE.contact.email}">${SITE.contact.email}</a>
+                <a href="tel:${SITE.contact.phone}">${SITE.contact.phone}</a>
+                <div class="footer-socials"><a href="https://www.linkedin.com/in/farhanshakeel-ee/" target="_blank" rel="noopener">LinkedIn <span>↗</span></a><a href="https://github.com/farhan-shakeel-ee" target="_blank" rel="noopener">GitHub <span>↗</span></a><a href="${SITE.contact.whatsapp}" target="_blank" rel="noopener">WhatsApp <span>↗</span></a></div>
+            </section>
+        </div>
+        <div class="container site-footer-bottom"><span>&copy; ${new Date().getFullYear()} ${SITE.brand}</span><span>Pakistan · Engineering with intent</span></div>`;
+    if (!footer.isConnected) document.body.appendChild(footer);
 }
 
 function initializeSiteShell() {
