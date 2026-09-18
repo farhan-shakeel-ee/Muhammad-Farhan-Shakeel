@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <script>
+        if (localStorage.getItem("portfolio-theme") === "dark") document.documentElement.classList.add("dark-mode-preload");
+    </script>
+
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>
+        Article | Farhan Portfolio
+    </title>
+
+
+    <!-- CSS Files -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="assets/css/base.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="assets/css/navbar.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="assets/css/responsive.css"
+    >
+
+</head>
+
+
+<body class="article-page">
+
+
+    <!-- ==============================
+                HEADER
+    =============================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+
+            <!-- Logo -->
+
+            <a
+                class="logo"
+                href="index.html"
+            >
+                Engr.
+                <span>
+                    FARHAN
+                </span>
+            </a>
+
+
+            <!-- Navigation Links -->
+
+            <ul class="nav-links">
+            </ul>
+
+
+            <!-- Resume -->
+
+            <div class="nav-right">
+
+                <a
+                    class="resume-btn"
+                    href="assets/resume/resume.pdf"
+                >
+                    Resume
+                </a>
+
+            </div>
+
+
+            <!-- Mobile Menu -->
+
+            <div class="menu-btn">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ==============================
+            MOBILE NAVIGATION
+    =============================== -->
+
+    <div class="overlay"></div>
+
+
+    <nav class="mobile-nav">
+
+        <ul>
+        </ul>
+
+    </nav>
+
+
+    <!-- ==============================
+                MAIN CONTENT
+    =============================== -->
+
+    <main>
+
+        <section>
+
+            <div
+                id="articleRoot"
+                class="container article-reader"
+            >
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==============================
+                JAVASCRIPT
+    =============================== -->
+
+    <script src="assets/js/app.js"></script>
+
+    <script src="assets/js/article.js"></script>
+
+</body>
+
+</html>

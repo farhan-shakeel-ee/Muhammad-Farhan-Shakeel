@@ -1,0 +1,310 @@
+#projectHero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    padding-top:120px;
+
+}
+
+
+.project-hero{
+
+    display:grid;
+
+    grid-template-columns:1.1fr .9fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.project-cover{
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.project-cover img{
+
+    width:100%;
+
+    height:100%;
+
+    display:block;
+
+    object-fit:contain;
+
+    background:var(--paper);
+
+}
+
+
+.project-content h1{
+
+    font-size:4rem;
+
+    margin-bottom:20px;
+
+}
+
+.project-content p{
+
+    color:var(--text-light);
+
+    margin:25px 0;
+
+    line-height:1.8;
+
+}
+
+
+.tech-list{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin:35px 0;
+
+}
+
+.tech-list span{
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:rgba(79,124,255,.15);
+
+    color:var(--primary);
+
+}
+
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fill,minmax(300px,1fr));
+
+    gap:25px;
+
+}
+
+.gallery-grid img{
+
+    display:block;
+
+    width:100%;
+
+    height:100%;
+
+    aspect-ratio:16 / 9;
+
+    object-fit:contain;
+
+    background:var(--paper);
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+}
+
+.gallery-grid img:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+
+.video-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(450px,1fr));
+
+    gap:30px;
+
+}
+
+.video-grid video{
+
+    width:100%;
+
+    border-radius:20px;
+
+}
+
+
+.spec-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.spec-table td{
+
+    padding:18px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.spec-table tr:hover{
+
+    background:rgba(255,255,255,.03);
+
+}
+
+
+
+.download-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+.download-card{
+
+    padding:30px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.04);
+
+    transition:.35s;
+
+}
+
+.download-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+.related-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+}
+
+
+/*====================================
+        LIGHTBOX
+====================================*/
+
+.lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.92);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:99999;
+
+}
+
+.lightbox.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.lightbox img{
+
+    max-width:90%;
+
+    max-height:85vh;
+
+    border-radius:20px;
+
+}
+
+.lightbox button{
+
+    position:absolute;
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    font-size:1.3rem;
+
+}
+
+.close{
+
+    top:30px;
+
+    right:30px;
+
+}
+
+.prev{
+
+    left:40px;
+
+}
+
+.next{
+
+    right:40px;
+
+}
+
+

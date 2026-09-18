@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <script>
+        if (localStorage.getItem("portfolio-theme") === "dark") document.documentElement.classList.add("dark-mode-preload");
+    </script>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        About | Farhan Portfolio
+    </title>
+
+
+    <!-- Google Fonts -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    >
+
+
+    <!-- CSS Files -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="assets/css/base.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="assets/css/navbar.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="assets/css/animations.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="assets/css/responsive.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==============================
+            LOADING SCREEN
+    =============================== -->
+
+    <div id="loader"></div>
+
+
+    <!-- ==============================
+            BACKGROUND
+    =============================== -->
+
+    <div class="background-animation"></div>
+
+
+    <!-- ==============================
+                HEADER
+    =============================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+
+            <!-- Logo -->
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                Engr.<span>FARHAN</span>
+            </a>
+
+
+            <!-- Desktop Navigation -->
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        class="active"
+                        href="about.html"
+                    >
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="projects.html">
+                        Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a href="skills.html">
+                        Skills
+                    </a>
+                </li>
+
+                <li>
+                    <a href="research.html">
+                        Research
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <!-- Resume Button -->
+
+            <div class="nav-right">
+
+                <a
+                    href="assets/resume/resume.pdf"
+                    class="resume-btn"
+                >
+                    Resume
+                </a>
+
+            </div>
+
+
+            <!-- Mobile Menu Button -->
+
+            <div class="menu-btn">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ==============================
+            MOBILE NAVIGATION
+    =============================== -->
+
+    <div class="overlay"></div>
+
+
+    <nav class="mobile-nav">
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="projects.html">
+                    Projects
+                </a>
+            </li>
+
+            <li>
+                <a href="skills.html">
+                    Skills
+                </a>
+            </li>
+
+            <li>
+                <a href="research.html">
+                    Research
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ==============================
+                MAIN CONTENT
+    =============================== -->
+
+    <main>
+
+        <section>
+
+            <div class="container">
+
+
+                <!-- ==============================
+                        ABOUT SECTION
+                =============================== -->
+
+                <div class="section-title">
+
+                    <span>
+                        About
+                    </span>
+
+                    <h2>
+                        About Me
+                    </h2>
+
+                    <p>
+
+                        Hello! I'm
+                        <strong>
+                            Muhammad Farhan Shakeel
+                        </strong>,
+
+                        an Electrical Engineering student at the
+                        University of Engineering and Technology,
+                        Lahore, with a passion for designing,
+                        building, and learning new technologies.
+
+                        My interests lie in <span style="font-weight: bolder; font-style: italic;">IC Design, Analog and Digital Circuits Design, PCB Design, 
+                        Python programming, C/C++,
+                        Microprocessors, and Embedded Systems,</span>
+                        where I enjoy combining hardware and software
+                        to create practical engineering solutions.
+
+                        <br>
+                        <br>
+
+                        I believe the best way to learn is by building
+                        real projects.
+
+                        Whether designing printed circuit boards,
+                        programming microcontrollers, or developing
+                        embedded applications, I'm always eager to
+                        improve my technical skills and explore new
+                        challenges.
+
+                        My goal is to become a skilled engineer who
+                        develops innovative solutions that solve
+                        real-world problems.
+
+                    </p>
+
+                </div>
+
+
+                <!-- ==============================
+                        SKILLS / INFO GRID
+                =============================== -->
+
+                <div class="skills-grid">
+
+
+                    <!-- Personal Information -->
+
+                    <div class="skill-category glass-card">
+
+                        <div class="skill-header">
+
+                            <i class="fa-solid fa-brain"></i>
+
+                            <h3>
+                                Personal Info
+                            </h3>
+
+                        </div>
+
+
+                        <div>
+                            <strong>
+                                Name:
+                            </strong>
+
+                            Muhammad Farhan Shakeel
+                        </div>
+
+
+                        <div>
+                            <strong>
+                                Age:
+                            </strong>
+
+                            20
+                        </div>
+
+
+                        <div>
+                            <strong>
+                                Gender:
+                            </strong>
+
+                            Male
+                        </div>
+
+
+                        <div>
+                            <strong>
+                                Focus:
+                            </strong>
+
+                            Computer Architecture & Embedded Systems
+                        </div>
+
+
+                        <div>
+                            <strong>
+                                Country:
+                            </strong>
+
+                            Pakistan
+                        </div>
+
+                    </div>
+
+
+                    <!-- Interests -->
+
+                    <div class="skill-category glass-card">
+
+                        <div class="skill-header">
+
+                            <i class="fa-solid fa-lightbulb"></i>
+
+                            <h3>
+                                Interests
+                            </h3>
+
+                        </div>
+
+                        <p>
+
+                            I'm passionate about PCB Design,
+                            Python programming, C/C++,
+                            Microprocessors, and Embedded Systems.
+
+                            I enjoy exploring new technologies,
+                            solving engineering challenges,
+                            and building projects that combine
+                            hardware and software.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+
+    <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>

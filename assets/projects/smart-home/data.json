@@ -1,0 +1,77 @@
+{
+  "id": "smart-home",
+  "title": "Smart Home Automation System",
+  "subtitle": "ESP32-Based IoT Project for Home Automation",
+  "category": [
+    "IoT",
+    "Embedded Systems"
+  ],
+  "featured": true,
+  "cover": "gallery/cover.png",
+  "hero": "gallery/1.png",
+
+  "description": "A complete esp32-based smart home automation system that allows users to control appliances remotely using Wi-Fi, bluetooth, and motion sensors.",
+
+  "overview": "This project uses an ESP32 microcontroller to control electrical appliances over Bluetooth. It includes relay modules, sensor monitoring, real-time updates, and a responsive dashboard for managing connected devices.",
+
+  "technologies": [
+    "ESP32",
+    "sensors",
+    "Buzzer",
+    "Relay Module",
+    "BMS",
+    "Battery"
+  ],
+
+  "gallery": [
+    "gallery/cover.png",
+    "gallery/2.png",
+    "gallery/3.png"
+  ],
+
+  "videos": [
+  ],
+
+  "documents": [
+    {
+      "title": "Project Report",
+      "file": "files/report.pdf"
+    }
+  ],
+
+  "features": [
+    "Wi-Fi Based Remote Control",
+    "Real-Time Sensor Monitoring",
+    "Relay Automation",
+    "Responsive Dashboard",
+    "Over-the-Air Updates",
+    "Energy Consumption Monitoring"
+  ],
+
+  "specifications": {
+    "Controller": "ESP32",
+    "Programming Language": "C++",
+    "Connectivity": "Bluetooth, Wi-Fi",
+    "Power Supply": "5V DC",
+    "Platform": "PlatformIO"
+  },
+
+  "challenges": [
+    "Maintaining stable Wi-Fi connectivity",
+    "Reducing relay switching delay",
+    "Ensuring secure communication",
+    "Optimizing power consumption"
+  ],
+
+  "future": [
+    "Voice Assistant Integration",
+    "Mobile Application",
+    "AI-Based Energy Optimization",
+    "Cloud Analytics Dashboard" 
+  ],
+
+  "links": {
+    "github": "https://github.com/farhan-shakeel-ee",
+    "demo": "https://github.com/farhan-shakeel-ee"
+  }
+}

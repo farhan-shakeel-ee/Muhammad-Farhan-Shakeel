@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <script>
+        if (localStorage.getItem("portfolio-theme") === "dark") document.documentElement.classList.add("dark-mode-preload");
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Research | Farhan Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+    <div id="loader"></div>
+
+    <div class="background-animation"></div>
+
+    <!-- ==================== HEADER ==================== -->
+
+    <header>
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                Engr.<span>FARHAN</span>
+            </a>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
+                <li>
+                    <a href="projects.html">Projects</a>
+                </li>
+
+                <li>
+                    <a href="skills.html">Skills</a>
+                </li>
+
+                <li>
+                    <a class="active" href="research.html">
+                        Research
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+            <div class="nav-right">
+
+                <a
+                    href="assets/resume/resume.pdf"
+                    class="resume-btn"
+                >
+                    Resume
+                </a>
+
+            </div>
+
+            <div class="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- ==================== MOBILE NAVIGATION ==================== -->
+
+    <div class="overlay"></div>
+
+    <nav class="mobile-nav">
+
+        <ul>
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="about.html">About</a>
+            </li>
+
+            <li>
+                <a href="projects.html">Projects</a>
+            </li>
+
+            <li>
+                <a href="skills.html">Skills</a>
+            </li>
+
+            <li>
+                <a href="research.html">Research</a>
+            </li>
+
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+
+    <main>
+
+        <section id="research">
+
+            <div class="container">
+
+                <!-- Section Title -->
+
+                <div class="section-title">
+
+                    <span>Research</span>
+
+                    <h2>
+                        Research Interests
+                    </h2>
+
+                    <p>
+                        Exploring the systems, architectures, and tools
+                        that connect digital design with practical engineering.
+                    </p>
+
+                </div>
+
+                <div id="researchGrid" class="research-grid"></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/research.js"></script>
+
+</body>
+
+</html>

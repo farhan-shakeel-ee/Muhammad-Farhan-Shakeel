@@ -1,0 +1,53 @@
+[
+  {
+    "id": "reliable-prototypes",
+    "category": "Embedded Systems",
+    "readTime": "5 min read",
+    "title": "Designing Reliable Electronics Prototypes",
+    "summary": "A practical workflow for moving from a circuit idea to a tested, documented prototype.",
+    "images": [
+      "assets/projects/Memory_Controller/gallery/2.png",
+      "assets/projects/Memory_Controller/gallery/3.png"
+    ],
+    "body": [
+      "A reliable prototype starts with a clear boundary: define the inputs, outputs, power requirements, and failure conditions before choosing components.",
+      "Break the design into small testable blocks. Validate power, communication, and sensor paths separately, then combine them after each block behaves as expected.",
+      "Document the decisions while you build. A short test log makes debugging faster and turns a one-off experiment into a reusable engineering process."
+    ],
+    "article_pdf": "assets/projects/Memory_Controller/files/report.pdf"
+  },
+  {
+    "id": "learning-through-projects",
+    "category": "Engineering Practice",
+    "readTime": "4 min read",
+    "title": "Learning Through Real Engineering Projects",
+    "summary": "Why small, complete builds create deeper technical understanding than isolated tutorials.",
+    "images": [
+      "assets/projects/Memory_Controller/gallery/4.png",
+      "assets/projects/Memory_Controller/gallery/5.png"
+    ],
+    "body": [
+      "Projects create useful constraints. They force hardware, software, documentation, and testing to work together instead of leaving knowledge in separate lessons.",
+      "Choose a build that is small enough to finish but rich enough to expose one real engineering tradeoff. A finished project gives you evidence you can inspect and improve.",
+      "The goal is not perfect first attempts. The goal is a repeatable cycle of building, measuring, learning, and refining."
+    ],
+    "article_pdf": "assets/projects/Memory_Controller/files/report.pdf"
+  },
+  {
+    "id": "digital-systems-notes",
+    "category": "Digital Design",
+    "readTime": "6 min read",
+    "title": "Notes on Digital Systems and Interfaces",
+    "summary": "The design habits that make UART, SPI, I2C, and memory-controller work easier to reason about.",
+    "images": [
+      "assets/projects/Memory_Controller/gallery/6.png",
+      "assets/projects/Memory_Controller/gallery/7.png"
+    ],
+    "body": [
+      "Digital interfaces become easier to debug when timing, ownership, and reset behavior are written down before implementation.",
+      "Use small simulations and targeted test cases to verify one protocol rule at a time. This keeps failures local and makes waveforms useful rather than overwhelming.",
+      "Good interface design is communication between engineers as much as it is communication between devices."
+    ],
+    "article_pdf": "assets/projects/Memory_Controller/files/report.pdf"
+  }
+]

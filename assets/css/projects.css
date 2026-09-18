@@ -1,0 +1,317 @@
+/*=========================================
+                PROJECTS
+==========================================*/
+
+.projects{
+
+    padding:150px 0;
+
+}
+
+.projects-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(auto-fit,minmax(360px,1fr));
+
+    gap:40px;
+
+    margin-top:70px;
+
+}
+
+
+.project-search{
+
+    width:700px;
+
+    max-width:100%;
+
+    margin:50px auto;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:18px 28px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.project-search input{
+
+    width:100%;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:1rem;
+
+    outline:none;
+
+}
+
+
+.project-filter{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-bottom:60px;
+
+}
+
+.project-filter button{
+
+    padding:12px 24px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.04);
+
+    color:white;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+.project-filter button:hover,
+
+.project-filter button.active{
+
+    background:var(--primary);
+
+}
+
+
+
+
+.project-card{
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    background:#111827;
+
+    transition:.45s;
+
+    position:relative;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+
+
+.project-card:hover{
+
+    transform:
+
+        translateY(-15px)
+
+        scale(1.02);
+
+    box-shadow:
+
+        0 30px 80px
+
+        rgba(79,124,255,.25);
+
+}
+
+
+.project-image{
+
+    height:240px;
+
+    overflow:hidden;
+
+}
+
+.project-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.project-card:hover img{
+
+    transform:scale(1.1);
+
+}
+
+
+
+.project-body{
+
+    padding:28px;
+
+}
+
+
+
+.project-info{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+    margin:25px 0;
+
+}
+
+.project-info div{
+
+    background:rgba(255,255,255,.04);
+
+    padding:15px;
+
+    border-radius:14px;
+
+    text-align:center;
+
+}
+
+
+
+.project-card .btn-primary{
+
+    width:100%;
+
+}
+
+
+.featured-project{
+
+    margin-top:80px;
+
+    margin-bottom:90px;
+
+    border-radius:35px;
+
+    overflow:hidden;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    background:#101827;
+
+}
+
+
+
+/* skills */
+
+
+.skills-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(min(100%,350px),1fr));
+
+    gap:35px;
+
+}
+
+.skill-category{
+
+    padding:35px;
+
+    min-width:0;
+
+
+}
+
+.skill-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:25px;
+
+}
+
+.skill{
+
+    margin-bottom:22px;
+
+}
+
+.skill-info{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:8px;
+
+}
+
+.skill-bar{
+
+    height:10px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.08);
+
+    overflow:hidden;
+
+}
+
+.skill-progress{
+
+    height:100%;
+
+    background:linear-gradient(90deg,#4f7cff,#7c5cff);
+
+    border-radius:20px;
+
+    animation:growBar 1.5s ease;
+
+}
+
+@keyframes growBar{
+
+    from{
+
+        width:0;
+
+    }
+
+}
+
+
+

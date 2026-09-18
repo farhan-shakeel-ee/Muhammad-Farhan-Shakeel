@@ -1,0 +1,61 @@
+[
+  {
+    "id": "uet-electrical-engineering-degree",
+    "type": "Degree",
+    "title": "Electrical Engineering",
+    "issuer": "University of Engineering and Technology, Lahore",
+    "date": "2024 - 2028",
+    "summary": "Undergraduate study focused on embedded systems, digital design, computer architecture, electronics, and intelligent engineering systems.",
+    "details": [
+      "Electrical engineering student at the University of Engineering and Technology, Lahore.",
+      "Academic interests include PCB design, microprocessors, digital systems, embedded development, and computer architecture."
+    ],
+    "skills": [
+      "Digital Systems",
+      "Embedded Systems",
+      "Computer Architecture",
+      "PCB Design"
+    ],
+    "document": "assets/resume/resume.pdf",
+    "image": ""
+  },
+  {
+    "id": "memory-controller-project-award",
+    "type": "Award",
+    "title": "Memory Controller Project Recognition",
+    "issuer": "Engineering Portfolio",
+    "date": "2026",
+    "summary": "Recognition for practical FPGA work combining UART communication, FIFO buffering, FSM control, and memory operations.",
+    "details": [
+      "This award entry documents a featured engineering project and can be replaced with the official award title and issuing organization.",
+      "The linked document and image fields are intentionally editable so the official evidence can be added later."
+    ],
+    "skills": [
+      "SystemVerilog",
+      "FPGA",
+      "UART",
+      "FSM"
+    ],
+    "document": "assets/projects/Memory_Controller/files/report.pdf",
+    "image": "assets/projects/Memory_Controller/gallery/cover.png"
+  },
+  {
+    "id": "fexo-engineering-leadership",
+    "type": "Achievement",
+    "title": "Founder and CEO of FEXO X",
+    "issuer": "FEXO X",
+    "date": "2026",
+    "summary": "An engineering leadership achievement focused on turning technical ideas into useful products and practical systems.",
+    "details": [
+      "FEXO X brings together engineering, experimentation, and product thinking.",
+      "This record can be updated with an official certificate, award, or supporting document."
+    ],
+    "skills": [
+      "Engineering Leadership",
+      "Product Development",
+      "Innovation"
+    ],
+    "document": "",
+    "image": ""
+  }
+]

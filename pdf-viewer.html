@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        if (localStorage.getItem("portfolio-theme") === "dark") document.documentElement.classList.add("dark-mode-preload");
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper PDF | Farhan Portfolio</title>
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/reference-theme.css">
+</head>
+<body class="pdf-viewer-page">
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="index.html">Engr. <span>FARHAN</span></a>
+            <ul class="nav-links"></ul>
+            <div class="nav-right">
+                <a class="resume-btn" href="assets/resume/resume.pdf">Resume</a>
+            </div>
+            <div class="menu-btn"><i class="fa-solid fa-bars"></i></div>
+        </nav>
+    </header>
+    <div class="overlay"></div>
+    <nav class="mobile-nav"><ul></ul></nav>
+
+    <main>
+        <div class="pdf-toolbar container">
+            <a id="pdfBack" class="article-back" href="research.html" aria-label="Back to research" title="Back to research">&larr;</a>
+            <button id="pdfThemeToggle" class="pdf-theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">☾</button>
+        </div>
+        <iframe id="pdfFrame" class="pdf-frame" title="Research paper PDF"></iframe>
+    </main>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/pdf-viewer.js"></script>
+</body>
+</html>

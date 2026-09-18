@@ -1,0 +1,131 @@
+{
+  "id": "Memory_Controller",
+  "title": "Memory Controller Design",
+  "subtitle": "UART-Based Memory Controller on Artix-7 FPGA",
+  "category": [
+    "Computer Architecture"
+  ],
+  "featured": true,
+  "cover": "gallery/cover.png",
+  "hero": "gallery/cover.png",
+  "heroVideo": "gallery/111.webm",
+
+  "description": "This project implements a UART-based Memory Controller on an Artix-7 FPGA using SystemVerilog. The system enables a computer to communicate with on-chip memory through a serial UART interface. A laptop is connected to the FPGA via UART, and PuTTY is used as the serial terminal to send commands and display responses.The received UART data is first stored in an RX FIFO buffer, which prevents data loss when bytes arrive faster than the memory controller can process them. Likewise, data transmitted back to the laptop is temporarily stored in a TX FIFO buffer, ensuring smooth and reliable communication.At the core of the design is a Finite State Machine (FSM)-based Memory Controller, which interprets incoming commands and controls all memory operations. The protocol uses a simple control bit:1 → Write Operation: The received data is written to the specified memory address.0 → Read Operation: Data is read from the specified memory address and transmitted back to the laptop through the UART interface.The FSM manages the complete sequence of operations, including command decoding, address processing, memory read/write control, FIFO handshaking, and UART data transfer. This ensures synchronized and error-free communication between the UART interface and the memory.Overall, the project demonstrates a modular FPGA architecture consisting of:UART Receiver and Transmitter for serial communication.RX and TX FIFO Buffers for reliable data buffering.FSM-Based Memory Controller for command execution and memory access.Memory Module for storing and retrieving data.The complete system provides a simple and efficient method for controlling memory from a PC through PuTTY, making it suitable for FPGA learning, embedded communication, and memory interface applications.",
+  "overview": "This project implements a UART-based Memory Controller on an Artix-7 FPGA using SystemVerilog.",
+
+  "sections": [
+    {
+      "heading": "Introduction",
+      "paragraphs": [
+        "This project implements a UART-based Memory Controller on an Artix-7 FPGA using SystemVerilog.",
+        "It enables a computer to communicate with on-chip memory through a serial UART interface, with PuTTY used as the terminal for sending commands and displaying responses."
+      ]
+    },
+    {
+      "heading": "System Architecture",
+      "paragraphs": [
+        "The design combines a UART receiver and transmitter, RX and TX FIFO buffers, an FSM-based memory controller, and a memory module.",
+        "Each block has a focused responsibility, making the system easier to simulate, inspect, and extend."
+      ]
+    },
+    {
+      "heading": "Communication",
+      "paragraphs": [
+        "Received UART data is first stored in the RX FIFO so incoming bytes are not lost while the controller processes a command.",
+        "Response data is temporarily stored in the TX FIFO before it is transmitted back to the laptop, providing reliable buffering in both directions."
+      ]
+    },
+    {
+      "heading": "Read and Write Operation",
+      "paragraphs": [
+        "The protocol uses a control bit to select the operation. A value of 1 performs a write operation, while a value of 0 performs a read operation.",
+        "The controller decodes the command, processes the address and data, performs the memory access, and returns the result through UART."
+      ]
+    },
+    {
+      "heading": "Implementation and Verification",
+      "paragraphs": [
+        "The FSM manages command decoding, address processing, memory read and write control, FIFO handshaking, and UART data transfer.",
+        "Vivado, QuestaSim, Icarus Verilog, and GTKWave support synthesis, simulation, and waveform inspection throughout development."
+      ]
+    },
+    {
+      "heading": "Project Outcome",
+      "paragraphs": [
+        "The completed system provides a simple and efficient way to control FPGA memory from a PC through PuTTY.",
+        "It demonstrates practical modular FPGA architecture for embedded communication, memory interfaces, and digital design learning."
+      ]
+    }
+  ],
+
+  "technologies": [
+    "SystemVerilog",
+    "Vivado",
+    "QuestaSim",
+    "UART",
+    "FIFO",
+    "FSM",
+    "Icarus Verilog",
+    "GTKwave",
+    "Artix-7 FPGA"
+  ],
+
+  "gallery": [
+    "gallery/1.png",
+    "gallery/2.png",
+    "gallery/3.png",
+    "gallery/4.png",
+    "gallery/5.png",
+    "gallery/6.png",
+    "gallery/7.png",
+    "gallery/8.png"
+  ],
+
+  "videos": [
+  ],
+
+  "documents": [
+    {
+      "title": "Project Report",
+      "file": "files/report.pdf"
+    }
+  ],
+
+  "features": [
+    "UART-Based Communication",
+    "FIFO Buffering",
+    "FSM-Based Control",
+    "Memory Read/Write Operations"
+  ],
+
+  "specifications": {
+    "FPGA Board": "Artix-7 FPGA",
+    "Hardware Language": "SystemVerilog",
+    "Modules": "UART, FIFO, FSM, Memory",
+    "Power Supply": "3.3V DC",
+    "Development Environment": "Vivado",
+    "Simulation": "QuestaSim",
+    "Waveform Viewer": "GTKwave"
+  },
+
+  "challenges": [
+    "Maintaining stable UART communication",
+    "Reducing FIFO latency",
+    "Ensuring reliable FSM operation",
+    "Optimizing memory access timing"
+  ],
+
+  "future": [
+    "Write operation is by commmand 1",
+    "Read operation is by command 0",
+    "The FSM manages the complete sequence of operations, including command decoding, address processing, memory read/write control, FIFO handshaking, and UART data transfer.",
+    "This ensures synchronized and error-free communication between the UART interface and the memory.",
+    "Overall, the project demonstrates a modular FPGA architecture consisting of:UART Receiver and Transmitter for serial communication.RX and TX FIFO Buffers for reliable data buffering.FSM-Based Memory Controller for command execution and memory access.Memory Module for storing and retrieving data.",
+    "The complete system provides a simple and efficient method for controlling memory from a PC through PuTTY, making it suitable for FPGA learning, embedded communication, and memory interface applications."
+  ],
+
+  "links": {
+    "github": "https://github.com/farhan-shakeel-ee/Memory_Controller.git",
+    "demo": "https://github.com/farhan-shakeel-ee/Memory_Controller.git"
+  }
+}

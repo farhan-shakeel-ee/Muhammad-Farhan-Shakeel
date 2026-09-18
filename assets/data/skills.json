@@ -1,0 +1,161 @@
+{
+    "categories": [
+
+        {
+            "title": "Programming",
+
+            "icon": "fa-solid fa-code",
+
+            "skills": [
+
+                {
+                    "name": "C/C++",
+                    "level": 70
+                },
+
+                {
+                    "name": "Python",
+                    "level": 90
+                },
+
+                {
+                    "name": "System Verilog",
+                    "level": 90
+                },
+
+                {
+                    "name": "MATLAB",
+                    "level": 40
+                }
+
+            ]
+        },
+
+       
+
+        {
+            "title": "Embedded Systems",
+
+            "icon": "fa-solid fa-microchip",
+
+            "skills": [
+
+                {
+                    "name": "Arduino",
+                    "level": 90
+                },
+
+                {
+                    "name": "ESP32",
+                    "level": 90
+                },
+
+                {
+                    "name": "STM32",
+                    "level": 30
+                },
+
+                {
+                    "name": "Raspberry Pi",
+                    "level": 0
+                }
+
+            ]
+        },
+
+        {
+            "title": "Electronics",
+
+            "icon": "fa-solid fa-bolt",
+
+            "skills": [
+
+                {
+                    "name": "PCB Design",
+                    "level": 92
+                },
+
+                {
+                    "name": "Circuit Design",
+                    "level": 65
+                },
+
+                {
+                    "name": "Power Electronics",
+                    "level": 10
+                },
+
+                {
+                    "name": "Verification & Testing",
+                    "level": 60
+                }
+
+            ]
+        },
+
+        {
+            "title": "Software",
+
+            "icon": "fa-solid fa-laptop-code",
+
+            "skills": [
+
+                {
+                    "name": "Git",
+
+                    "level": 70
+                },
+
+                {
+                    "name": "Linux",
+
+                    "level": 80
+                },
+
+                {
+                    "name": "KiCad",
+
+                    "level": 95 
+                },
+
+                {
+                    "name": "Altium Designer",
+
+                    "level": 80
+                }
+
+            ]
+        },
+
+         {
+            "title": "Others",
+
+            "icon": "fa-solid fa-brain",
+
+            "skills": [
+
+                {
+                    "name": "Web Development",
+                    "level": 80
+                },
+
+                {
+                    "name": "Video Editing",
+                    "level": 70
+                },
+
+                {
+                    "name": "Graphic Designing",
+                    "level": 60
+                },
+
+                {
+                    "name": "MS Office",
+                    "level": 75
+                }
+
+            ]
+        }
+
+    ]
+}

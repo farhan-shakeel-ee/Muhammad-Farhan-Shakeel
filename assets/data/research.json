@@ -1,0 +1,191 @@
+[
+  {
+    "id": "risc-v-memory-architecture",
+    "number": "01",
+    "category": "Computer Architecture",
+    "title": "A Practical Study of RISC-V Memory Architectures",
+    "summary": "Examining how memory organization, controller behavior, and predictable interfaces shape efficient processor systems.",
+    "keywords": [
+      "RISC-V architecture",
+      "Memory controller design",
+      "Computer architecture"
+    ],
+    "authors": "Muhammad Farhan Shakeel",
+    "date": "2026",
+    "article_pdf": "assets/projects/Memory_Controller/files/report.pdf",
+    "images": [
+      "assets/projects/Memory_Controller/gallery/1.png",
+      "assets/projects/Memory_Controller/gallery/4.png"
+    ],
+    "sections": [
+      {
+        "heading": "Abstract",
+        "paragraphs": [
+          "This paper presents a practical study of memory architecture from the perspective of a small digital system. It focuses on the relationship between processor requests, controller state, buffering, and memory timing.",
+          "The study shows how explicit ownership and carefully defined read and write transactions make a memory subsystem easier to verify and extend."
+        ]
+      },
+      {
+        "heading": "Introduction",
+        "paragraphs": [
+          "Memory is not only a storage block. It is an interface between computation and the physical timing constraints of a digital system. A useful architecture therefore makes request ownership, response timing, reset behavior, and invalid operations visible.",
+          "RISC-V provides a clear instruction-set foundation for exploring these ideas because the surrounding memory system can be designed and tested independently of the processor core."
+        ]
+      },
+      {
+        "heading": "Methodology",
+        "paragraphs": [
+          "The study models a controller as a finite-state machine with separate request, address, data, and completion signals. Small directed simulations are used to test read latency, write ordering, reset recovery, and back-to-back transactions.",
+          "The implementation is divided into interface, control, storage, and verification responsibilities so that each behavior can be inspected in isolation."
+        ]
+      },
+      {
+        "heading": "Results and Discussion",
+        "paragraphs": [
+          "The structured controller model makes timing failures easier to localize. Buffering protects the storage interface from short bursts, while explicit state transitions make the waveform communicate the intended transaction sequence.",
+          "The main tradeoff is between simplicity and throughput. A small controller is easier to reason about, while higher throughput requires more overlap and more carefully specified hazards."
+        ]
+      },
+      {
+        "heading": "Conclusion",
+        "paragraphs": [
+          "A reliable memory architecture begins with a precise contract rather than with a large amount of logic. RISC-V-based systems provide a useful environment for applying this discipline to real hardware designs.",
+          "Future work can evaluate cache behavior, bus arbitration, and formal checks for protocol properties."
+        ]
+      },
+      {
+        "heading": "References",
+        "paragraphs": [
+          "[1] RISC-V International, The RISC-V Instruction Set Manual.",
+          "[2] D. A. Patterson and J. L. Hennessy, Computer Organization and Design."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "reliable-digital-interfaces",
+    "number": "02",
+    "category": "Digital Interfaces",
+    "title": "Design Practices for Reliable Digital Interfaces",
+    "summary": "A structured approach to designing UART, SPI, and I2C interfaces that are easier to test, debug, and integrate.",
+    "keywords": [
+      "UART, SPI, and I2C interfaces",
+      "Digital logic systems",
+      "Protocol verification"
+    ],
+    "authors": "Muhammad Farhan Shakeel",
+    "date": "2026",
+    "article_pdf": "",
+    "images": [
+      "assets/projects/Memory_Controller/gallery/6.png",
+      "assets/projects/Memory_Controller/gallery/7.png"
+    ],
+    "sections": [
+      {
+        "heading": "Abstract",
+        "paragraphs": [
+          "Digital interfaces fail most often at their boundaries: ownership, timing, reset, and error handling. This paper presents a practical checklist for making those boundaries explicit before implementation.",
+          "The approach combines protocol tables, targeted simulations, and observable status signals to reduce the cost of integration debugging."
+        ]
+      },
+      {
+        "heading": "Introduction",
+        "paragraphs": [
+          "UART, SPI, and I2C are simple to describe but can be surprisingly subtle in a complete embedded system. A correct implementation must account for both the normal transfer and the moments when a device is late, reset, disconnected, or asked to process invalid data.",
+          "Writing the interface contract first gives hardware and software contributors a shared reference."
+        ]
+      },
+      {
+        "heading": "Methodology",
+        "paragraphs": [
+          "Each interface is described using a timing diagram, ownership table, reset rule, and error response. Tests then isolate one rule at a time, such as UART framing, SPI chip-select timing, or I2C acknowledgement behavior.",
+          "Assertions and waveform inspection are used together so that a passing transaction is also understandable to the engineer reviewing it."
+        ]
+      },
+      {
+        "heading": "Results and Discussion",
+        "paragraphs": [
+          "The interface checklist reduces ambiguous behavior during integration. Small tests expose protocol mistakes earlier than system-level demonstrations, where several independent failures can appear identical.",
+          "The method also improves documentation because each test becomes evidence for one explicit rule."
+        ]
+      },
+      {
+        "heading": "Conclusion",
+        "paragraphs": [
+          "Reliable digital interfaces are built through precise contracts and focused verification. The same habits transfer across serial protocols and make future changes less risky.",
+          "The next step is to automate the protocol checks in a reusable verification library."
+        ]
+      },
+      {
+        "heading": "References",
+        "paragraphs": [
+          "[1] N. W. Z. Schleicher, Digital Interface Design Notes.",
+          "[2] Official UART, SPI, and I2C device documentation."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "embedded-systems-prototyping",
+    "number": "03",
+    "category": "Embedded Systems",
+    "title": "From Embedded Prototype to Measurable System",
+    "summary": "Investigating how microcontrollers, sensors, and software can be developed as small, testable system boundaries.",
+    "keywords": [
+      "Microprocessor applications",
+      "IoT and smart devices",
+      "Hardware-software integration"
+    ],
+    "authors": "Muhammad Farhan Shakeel",
+    "date": "2026",
+    "article_pdf": "",
+    "images": [
+      "assets/projects/Memory_Controller/gallery/2.png",
+      "assets/projects/Memory_Controller/gallery/8.png"
+    ],
+    "sections": [
+      {
+        "heading": "Abstract",
+        "paragraphs": [
+          "Embedded prototypes become useful engineering systems when their assumptions, measurements, and failure modes are made explicit. This paper outlines a repeatable workflow for moving from a connected set of parts to a testable design.",
+          "The workflow emphasizes small interfaces, observable signals, and short measurement loops."
+        ]
+      },
+      {
+        "heading": "Introduction",
+        "paragraphs": [
+          "A prototype brings hardware and software into the same feedback loop. Sensor behavior, power conditions, timing, and application logic can all influence one another, which makes a large first build difficult to diagnose.",
+          "A staged workflow keeps the system understandable while it grows."
+        ]
+      },
+      {
+        "heading": "Methodology",
+        "paragraphs": [
+          "The proposed workflow begins with a signal and power map, followed by independent checks for the sensor, communication link, firmware state machine, and user-facing behavior. Each stage has one measurable acceptance condition.",
+          "Logs and repeatable test inputs are kept alongside the code so that a successful experiment can be reproduced after hardware changes."
+        ]
+      },
+      {
+        "heading": "Results and Discussion",
+        "paragraphs": [
+          "Separating the prototype into measurable boundaries makes faults easier to classify. A communication problem can be distinguished from a sensor problem before both are hidden inside application behavior.",
+          "The cost is a little more setup at the beginning, but the saved debugging time increases as the design becomes more complex."
+        ]
+      },
+      {
+        "heading": "Conclusion",
+        "paragraphs": [
+          "Embedded development benefits from the same engineering discipline as larger digital systems: define contracts, observe behavior, and test one assumption at a time.",
+          "This provides a practical foundation for reliable IoT and microprocessor applications."
+        ]
+      },
+      {
+        "heading": "References",
+        "paragraphs": [
+          "[1] J. Axelson, Embedded Ethernet and Internet Complete.",
+          "[2] Manufacturer datasheets and application notes for selected sensors and microcontrollers."
+        ]
+      }
+    ]
+  }
+]
