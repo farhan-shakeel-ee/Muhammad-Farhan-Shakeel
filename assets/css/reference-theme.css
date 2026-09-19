@@ -722,3 +722,36 @@ body.dark-mode .contact-form option { background:#111714; color:#edf3ed; }
     .projects-grid .project-info strong, .projects-grid .project-info small { display:block; }
     .projects-grid .btn-primary { padding:10px 6px; font-size:.65rem; text-align:center; white-space:normal; }
 }
+
+/* Homepage engineering illustration: vector artwork, no additional downloads. */
+.engineering-spotlight { display:grid; grid-template-columns:1.15fr 1fr; gap:40px; align-items:center; border-top:1px solid var(--line); padding-top:32px; }
+.engineering-copy { min-width:0; }
+.engineering-eyebrow { color:var(--green); font:.68rem var(--mono); text-transform:uppercase; letter-spacing:.1em; }
+.engineering-copy h2 { font-size:clamp(2rem, 4vw, 3.4rem); margin:16px 0; }
+.engineering-copy p { margin:0; max-width:580px; font-size:.96rem; }
+.engineering-copy p a { color:var(--ink); text-decoration:underline; text-underline-offset:3px; }
+.engineering-topics { display:flex; flex-wrap:wrap; gap:8px; margin:20px 0; padding:0; list-style:none; }
+.engineering-topics li { padding:6px 10px; border:1px solid var(--line); color:var(--muted-ink); font:.7rem var(--mono); }
+.engineering-links { display:flex; flex-wrap:wrap; gap:12px 24px; }
+.engineering-links a { display:inline-flex; align-items:center; gap:10px; min-height:44px; color:var(--ink); font-size:.88rem; text-decoration:underline; text-underline-offset:5px; }
+.engineering-links a:hover { color:var(--green); }
+.chip-illustration { position:relative; min-width:0; overflow:hidden; border:1px solid var(--line); border-radius:12px; background:radial-gradient(ellipse at center, var(--green-soft), var(--paper) 72%); }
+.chip-illustration svg { display:block; width:100%; height:auto; margin:20px 0; }
+.chip-caption { position:absolute; top:16px; left:18px; color:var(--muted-ink); font:.58rem var(--mono); letter-spacing:.14em; }
+.chip-caption-bottom { top:auto; bottom:16px; }
+.chip-traces { stroke:var(--green); stroke-width:1; opacity:.45; }
+.chip-signals { stroke:var(--green); stroke-width:2; stroke-dasharray:12 170; animation:chip-flow 7s linear infinite; }
+.chip-package { fill:var(--paper); stroke:var(--green); stroke-width:1.5; }
+.chip-core { fill:var(--green-soft); stroke:var(--line); }
+.chip-label { fill:var(--ink); font:12px var(--mono); letter-spacing:1px; }
+.chip-nodes { fill:var(--green); }
+@keyframes chip-flow { to { stroke-dashoffset:-364; } }
+@media (max-width:768px) {
+    .engineering-spotlight { grid-template-columns:minmax(0, 1fr); gap:22px; padding-top:24px; }
+    .engineering-copy h2 { font-size:clamp(1.9rem, 7vw, 2.5rem); }
+    .chip-illustration { width:100%; max-width:440px; justify-self:center; }
+    .chip-illustration svg { max-height:220px; margin:12px 0; }
+}
+@media (prefers-reduced-motion:reduce) {
+    .chip-signals { animation:none; }
+}
