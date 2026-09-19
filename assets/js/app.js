@@ -130,19 +130,24 @@ App.navbarScroll=function(){
 
 
 App.toggleMenu=function(){
-
-    this.mobileNav.classList.toggle("active");
-
-    this.overlay.classList.toggle("active");
-
+    this.setMenuOpen(!this.mobileNav.classList.contains("active"));
 };
 
 App.closeMenu=function(){
+    this.setMenuOpen(false);
+};
 
-    this.mobileNav.classList.remove("active");
-
-    this.overlay.classList.remove("active");
-
+App.setMenuOpen=function(open){
+    if (!this.mobileNav || !this.menuBtn) return;
+    this.mobileNav.classList.toggle("active", open);
+    this.overlay?.classList.toggle("active", open);
+    document.body.classList.toggle("menu-open", open);
+    this.menuBtn.setAttribute("aria-expanded", String(open));
+    this.menuBtn.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
+    if (!open && this.mobileNav.contains(document.activeElement)) this.menuBtn.focus();
+    this.mobileNav.inert = !open;
+    this.mobileNav.setAttribute("aria-hidden", String(!open));
+    if (open) this.mobileNav.querySelector("button, a")?.focus();
 };
 
 App.activeNavigation=function(){
@@ -164,6 +169,8 @@ App.activeNavigation=function(){
     });
 
     links.forEach(link=>{
+
+        if (!link.getAttribute("href").startsWith("#")) return;
 
         link.classList.remove("active");
 
@@ -615,5 +622,4 @@ animate
 animate();
 
 };
-
 

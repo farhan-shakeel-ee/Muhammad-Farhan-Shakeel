@@ -35,7 +35,7 @@ function ensureSharedTheme() {
 function renderNavigation() {
     const active = currentPage();
     const links = SITE.links.map(([label, href]) =>
-        `<li><a class="${active === href ? "active" : ""}" href="${href}">${label}</a></li>`
+        `<li><a class="${active === href ? "active" : ""}" ${active === href ? 'aria-current="page"' : ""} href="${href}">${label}</a></li>`
     ).join("");
     const header = document.querySelector("header");
     if (!header) return;
@@ -61,10 +61,45 @@ function renderNavigation() {
     }
     if (mobileList) mobileList.innerHTML = links;
     const closeButton = mobileNav?.querySelector(".mobile-nav-close");
-    closeButton?.addEventListener("click", () => {
-        document.querySelector(".mobile-nav")?.classList.remove("active");
-        document.querySelector(".overlay")?.classList.remove("active");
+    closeButton?.addEventListener("click", () => App.closeMenu());
+    const menuButton = document.querySelector(".menu-btn");
+    if (!mobileNav || !menuButton) return;
+    mobileNav.id = "mobile-navigation";
+    mobileNav.setAttribute("aria-label", "Mobile navigation");
+    menuButton.setAttribute("aria-controls", mobileNav.id);
+    if (menuButton.tagName !== "BUTTON") {
+        menuButton.setAttribute("role", "button");
+        menuButton.tabIndex = 0;
+        menuButton.addEventListener("keydown", event => {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                App.toggleMenu();
+            }
+        });
+    }
+    App.closeMenu();
+    mobileNav.addEventListener("click", event => {
+        if (event.target.closest("a")) App.closeMenu();
     });
+    document.addEventListener("keydown", event => {
+        if (!mobileNav.classList.contains("active")) return;
+        if (event.key === "Escape") App.closeMenu();
+        if (event.key !== "Tab") return;
+        const items = [...mobileNav.querySelectorAll("button, a[href]")];
+        const first = items[0];
+        const last = items[items.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first.focus();
+        }
+    });
+    window.matchMedia("(min-width: 1001px)").addEventListener("change", event => {
+        if (event.matches) App.closeMenu();
+    });
+    window.addEventListener("pageshow", () => App.closeMenu());
 }
 
 function initializeTheme() {
