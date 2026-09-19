@@ -74,7 +74,12 @@
     "gallery/8.webp"
   ],
   "videos": [],
-  "documents": [],
+  "documents": [
+    {
+      "title": "Download src (System_Verilog)",
+      "file": "files/fifo.sv"
+    }
+  ],
   "features": [
     "Parameterized Data Width",
     "Parameterized FIFO Depth",
