@@ -520,7 +520,7 @@ function createProjectCard(project){
 
         <a
 
-            href="project.html?id=${project.id}"
+            href="project.html?id=${project.folder}"
 
             class="btn-primary"
 
@@ -617,7 +617,7 @@ ${createProjectStats(project)}
 
 <a
 
-href="project.html?id=${project.id}"
+href="project.html?id=${project.folder}"
 
 class="btn-primary"
 
@@ -775,5 +775,4 @@ function updateProjects(){
     renderProjects();
 
 }
-
 
