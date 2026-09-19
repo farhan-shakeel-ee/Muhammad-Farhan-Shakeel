@@ -247,7 +247,7 @@ src="${imagePath(project, project.hero)}"
 
 fetchpriority="high"
 
-decoding="async"
+decoding="sync"
 
 >
 
@@ -318,11 +318,11 @@ function buildGallery(project){
 
                     data-index="${index}"
 
-                    loading="lazy"
+                    loading="eager"
 
-                    decoding="async"
+                    decoding="sync"
 
-                    fetchpriority="low"
+                    fetchpriority="auto"
 
                     src="${imagePath(project, image)}"
 

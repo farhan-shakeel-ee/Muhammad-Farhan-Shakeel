@@ -4,9 +4,9 @@ const params = new URLSearchParams(window.location.search);
 const researchId = params.get("id");
 const paperRoot = document.querySelector("#researchPaperRoot");
 
-function sectionMarkup(section, image) {
+function sectionMarkup(section, image, index) {
     const paragraphs = section.paragraphs.map(paragraph => `<p>${paragraph}</p>`).join("");
-    const imageMarkup = image ? `<figure class="article-image"><img src="${image}" alt="${section.heading} illustration" loading="lazy"></figure>` : "";
+    const imageMarkup = image ? `<figure class="article-image"><img src="${image}" alt="${section.heading} illustration" loading="eager" decoding="sync" fetchpriority="${index === 0 ? "high" : "auto"}"></figure>` : "";
     return `<section class="research-section"><h2>${section.heading}</h2>${paragraphs}${imageMarkup}</section>`;
 }
 
@@ -34,7 +34,7 @@ fetch("assets/data/research.json")
             <h1>${paper.title}</h1>
             <p class="research-byline">${paper.authors}</p>
             <div class="article-summary"><span>Abstract</span><p>${sections[0]?.paragraphs?.[0] || paper.summary}</p></div>
-            <div id="paper-content" class="article-body research-paper-body">${sections.slice(1).map((section, index) => sectionMarkup(section, images[index])).join("")}</div>`;
+            <div id="paper-content" class="article-body research-paper-body">${sections.slice(1).map((section, index) => sectionMarkup(section, images[index], index)).join("")}</div>`;
     })
     .catch(() => {
         paperRoot.innerHTML = `<p class="article-empty">This research paper could not be loaded.</p>`;

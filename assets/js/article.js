@@ -12,7 +12,7 @@ fetch("assets/data/articles.json")
         const body = Array.isArray(article.body) ? article.body : [];
         const bodyContent = body.map((paragraph, index) => {
             const image = images[index];
-            const imageMarkup = image ? `<figure class="article-image"><img src="${image}" alt="${article.title} illustration ${index + 1}" loading="lazy"></figure>` : "";
+            const imageMarkup = image ? `<figure class="article-image"><img src="${image}" alt="${article.title} illustration ${index + 1}" loading="eager" decoding="sync" fetchpriority="${index === 0 ? "high" : "auto"}"></figure>` : "";
             return `<article class="article-content-block"><p>${paragraph}</p>${imageMarkup}</article>`;
         }).join("");
         const download = article.article_pdf ? `<a class="article-download" href="${article.article_pdf}" download><span aria-hidden="true">↓</span> Download PDF</a>` : "";

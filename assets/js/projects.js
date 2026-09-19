@@ -490,11 +490,11 @@ function createProjectCard(project){
 
         <img
 
-            loading="lazy"
+            loading="eager"
 
-            decoding="async"
+            decoding="sync"
 
-            fetchpriority="low"
+            fetchpriority="auto"
 
             src="${projectPath(project,project.cover)}"
 
@@ -579,7 +579,7 @@ loading="eager"
 
 fetchpriority="high"
 
-decoding="async"
+decoding="sync"
 
 src="${projectPath(project,project.hero)}"
 
