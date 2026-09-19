@@ -99,13 +99,7 @@
     "Preventing writes when the FIFO is full",
     "Maintaining correct FIFO data ordering"
   ],
-  "future": [
-    "Add programmable almost-full and almost-empty flags",
-    "Add occupancy or data-count monitoring",
-    "Support synchronous reset as an optional configuration",
-    "Extend the design to an asynchronous dual-clock FIFO",
-    "Add a dedicated verification testbench with assertions and coverage"
-  ],
+
   "links": {
     "github": "https://github.com/farhan-shakeel-ee/FIFO.git",
     "demo": ""
