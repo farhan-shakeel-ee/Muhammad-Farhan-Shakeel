@@ -313,6 +313,7 @@ body.dark-mode .contact-form option { background:#111714; color:#edf3ed; }
 .pdf-theme-toggle:hover, .pdf-theme-toggle:focus-visible { background:var(--green); color:#fff; border-color:var(--green); outline:none; }
 .pdf-frame { width:100%; flex:1; min-height:calc(100vh - 150px); border:0; background:#fff; }
 .project-page #projectHero { min-height:0; padding:78px 0 58px !important; }
+.project-page .project-back { margin:0 0 28px; }
 .project-page #projectVideo { padding:28px 0 58px !important; }
 .project-page #projectVideo .section-title { margin-bottom:22px; }
 .project-video-frame { width:min(100%, 980px); margin:0 auto; border:1px solid var(--line); background:#000; }

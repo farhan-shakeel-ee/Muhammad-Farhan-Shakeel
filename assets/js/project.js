@@ -181,6 +181,8 @@ DOM.hero.innerHTML=
 
 <div class="container">
 
+<a class="article-back project-back" href="projects.html" aria-label="Back to all projects"><span aria-hidden="true">←</span><span>All projects</span></a>
+
 <div class="project-hero">
 
 <div class="project-content">
