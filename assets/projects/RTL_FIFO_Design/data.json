@@ -5,7 +5,7 @@
   "category": [
     "Digital Design"
   ],
-  "featured": false,
+  "featured": true,
   "cover": "gallery/1.webp",
   "hero": "gallery/2.webp",
   "description": "This project implements a parameterized synchronous FIFO (First-In, First-Out) buffer using SystemVerilog. The FIFO provides temporary data storage between producer and consumer logic while maintaining the order of data. The design supports configurable data width and FIFO depth through SystemVerilog parameters, making it reusable for different applications. The FIFO uses a single clock and asynchronous reset, with independent read and write enable controls. Write and read pointers track the locations of stored data, while an additional pointer bit is used to distinguish between the full and empty conditions. The design generates full and empty status flags to prevent invalid read and write operations. Data is written into the memory array when write enable is asserted and the FIFO is not full, while data is read when read enable is asserted and the FIFO is not empty. The design demonstrates practical RTL techniques for memory-based buffering, pointer management, parameterization, and FIFO status generation.",
