@@ -94,7 +94,7 @@ main > section:first-child { padding-top:90px !important; }
 .hero-container { gap:80px; }
 .hero-badge { padding:0; border:0; border-radius:0; background:none; color:var(--green); font-family:var(--mono); font-size:.9rem; font-weight:600; text-transform:uppercase; letter-spacing:.1em; }
 .hero-badge i { display:none; }
-.hero-left h1, section h2, .section-title h2 { color:var(--ink) !important; font-family:var(--serif) !important; letter-spacing:-.04em; line-height:1.05; }
+.hero-left h1, section h2, .section-title h1, .section-title h2 { color:var(--ink) !important; font-family:var(--serif) !important; letter-spacing:-.04em; line-height:1.05; }
 .hero-left h1 { font-size:clamp(3rem, 5.6vw, 5rem); margin:20px 0 14px; }
 .hero-left h1 { text-align:left; }
 .hero-left h2 { font-family:var(--sans) !important; color:var(--green) !important; font-size:clamp(1.45rem, 2.2vw, 2rem); font-weight:700; margin-bottom:18px; min-height:1.3em; }
@@ -125,7 +125,7 @@ body.dark-mode .profile-card img { mix-blend-mode:normal; }
 .stat-card h3, .skill-header h3, .project-card h3, .timeline-content h3 { color:var(--ink); font-family:var(--serif); }
 .section-title { text-align:left; margin-bottom:52px; }
 .section-title span { color:var(--green); font-family:var(--mono); font-size:.68rem; letter-spacing:.14em; }
-.section-title h2 { font-size:clamp(2.5rem, 5vw, 4.5rem); margin-top:10px; }
+.section-title h1, .section-title h2 { font-size:clamp(2.5rem, 5vw, 4.5rem); margin-top:10px; }
 .section-title p { max-width:650px; margin:18px 0 0; }
 .skills-grid, .projects-grid { gap:18px; }
 .skill-category { padding:28px; }
@@ -327,7 +327,7 @@ body.dark-mode .contact-form option { background:#111714; color:#edf3ed; }
 .project-page section { padding:58px 0 42px !important; }
 .project-page section + section { border-top:1px solid var(--line); }
 .project-page .section-title { margin-bottom:24px; }
-.project-page .section-title h2 { margin:0; font-size:clamp(1.9rem, 3.5vw, 3rem); letter-spacing:-.03em; }
+.project-page .section-title h1, .project-page .section-title h2 { margin:0; font-size:clamp(1.9rem, 3.5vw, 3rem); letter-spacing:-.03em; }
 .project-section-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; max-width:1000px; }
 .project-content-block { padding:22px; border:1px solid var(--line); background:var(--paper); }
 .project-content-block h3 { margin:0 0 14px; color:var(--ink); font:600 1.35rem/1.2 var(--serif); }
@@ -368,7 +368,7 @@ body.dark-mode .contact-form option { background:#111714; color:#edf3ed; }
     .profile-card { width:min(100%, 330px); margin:0 auto; }
     .profile-caption { width:min(100%, 330px); }
     .hero-left h1 { font-size:clamp(3rem, 14vw, 4.5rem); }
-    .section-title h2 { font-size:2.8rem; }
+    .section-title h1, .section-title h2 { font-size:2.8rem; }
     .section-title { margin-bottom:34px; }
     .site-footer { margin-top:48px; }
     .footer-cta { align-items:flex-start; flex-direction:column; gap:22px; padding:34px 0 30px; }
@@ -404,7 +404,7 @@ body.dark-mode .contact-form option { background:#111714; color:#edf3ed; }
     .project-page section { padding:42px 0 30px !important; }
     .project-page .feature-grid, .project-list-grid { grid-template-columns:1fr; }
     .project-section-grid { grid-template-columns:1fr; }
-    .project-page .section-title h2 { font-size:2.2rem; }
+    .project-page .section-title h1, .project-page .section-title h2 { font-size:2.2rem; }
 }
 
 /* About page: a focused editorial profile instead of a generic text block. */

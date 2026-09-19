@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://farhanshakeel-ee.netlify.app/sitemap.xml

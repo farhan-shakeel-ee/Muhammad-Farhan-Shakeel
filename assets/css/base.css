@@ -213,7 +213,7 @@ section p{
 
 }
 
-.section-title h2{
+.section-title h1, .section-title h2{
 
     margin-top:10px;
 
