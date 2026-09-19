@@ -110,6 +110,15 @@ function initializePageTransitions() {
         document.body.classList.add("page-leaving");
         window.setTimeout(() => { window.location.href = destination.href; }, 150);
     });
+
+    // A browser may restore the previous document from its back/forward cache.
+    // In that case it also restores the temporary fade-out class, leaving the
+    // page transparent until a manual refresh unless we clear it here.
+    const restorePageVisibility = () => {
+        document.body.classList.remove("page-leaving");
+    };
+    window.addEventListener("pageshow", restorePageVisibility);
+    window.addEventListener("popstate", () => requestAnimationFrame(restorePageVisibility));
 }
 
 function renderFooter() {
