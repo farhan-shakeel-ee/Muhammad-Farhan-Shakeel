@@ -396,6 +396,65 @@ body.dark-mode .contact-form option { background:#111714; color:#edf3ed; }
     .project-page .section-title h2 { font-size:2.2rem; }
 }
 
+/* About page: a focused editorial profile instead of a generic text block. */
+.about-page main > section:first-child { display:none; }
+.about-page .about-hero-section { min-height:calc(100vh - 115px); display:grid; align-items:center; padding:84px 0 76px !important; overflow:hidden; }
+.about-hero-grid { display:grid; grid-template-columns:minmax(0, 1.25fr) minmax(330px, .75fr); align-items:center; gap:clamp(46px, 9vw, 140px); }
+.about-eyebrow { display:inline-flex; align-items:center; gap:10px; color:var(--green); font:.68rem var(--mono); letter-spacing:.13em; text-transform:uppercase; }
+.about-eyebrow::before { content:""; width:26px; height:1px; background:currentColor; }
+.about-introduction { animation:about-rise .7s cubic-bezier(.2,.8,.2,1) both; }
+.about-introduction h1 { max-width:720px; margin:18px 0 22px; color:var(--ink); font:600 clamp(3.45rem, 7.2vw, 7rem)/.93 var(--serif); letter-spacing:-.065em; }
+.about-introduction h1 em { color:var(--green); font-style:italic; }
+.about-lead { max-width:620px; margin:0; color:var(--muted-ink) !important; font-size:clamp(1.05rem, 1.5vw, 1.2rem); line-height:1.7; }
+.about-lead strong { color:var(--ink); font-weight:600; }
+.about-actions { display:flex; align-items:center; flex-wrap:wrap; gap:22px; margin-top:34px; }
+.about-actions .btn-primary { display:inline-flex; align-items:center; gap:12px; }
+.about-text-link { display:inline-flex; align-items:center; gap:10px; color:var(--ink) !important; border-bottom:1px solid var(--line); padding:10px 0; font:.72rem var(--mono); letter-spacing:.07em; text-transform:uppercase; }
+.about-text-link span { color:var(--green); font-size:1.15rem; }
+.about-profile-card { position:relative; display:grid; gap:32px; min-height:430px; box-sizing:border-box; padding:30px; border:1px solid var(--line); background:linear-gradient(145deg, var(--green-soft), transparent 55%); overflow:hidden; animation:about-rise .7s .12s cubic-bezier(.2,.8,.2,1) both; }
+.about-profile-card::after { content:""; position:absolute; right:-96px; bottom:-110px; width:300px; aspect-ratio:1; border:1px solid var(--line); border-radius:50%; }
+.about-profile-top { display:flex; justify-content:space-between; align-items:center; gap:16px; }
+.about-orbit { width:42px; height:42px; border:1px solid var(--green); border-radius:50%; box-shadow:inset 0 0 0 8px var(--paper); }
+.about-status { display:inline-flex; align-items:center; gap:7px; color:var(--muted-ink); font:.58rem var(--mono); letter-spacing:.06em; text-transform:uppercase; }
+.about-status i { width:7px; height:7px; border-radius:50%; background:var(--green); box-shadow:0 0 0 4px color-mix(in srgb, var(--green) 16%, transparent); }
+.about-monogram { position:relative; z-index:1; color:var(--green); font:600 clamp(5.5rem, 10vw, 8rem)/.8 var(--serif); letter-spacing:-.12em; }
+.about-card-label { display:block; margin-bottom:8px; color:var(--muted-ink); font:.62rem var(--mono); letter-spacing:.1em; text-transform:uppercase; }
+.about-profile-card strong { position:relative; z-index:1; color:var(--ink); font:600 clamp(1.45rem, 2.2vw, 2rem)/1.12 var(--serif); }
+.about-facts { position:relative; z-index:1; display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:0; padding-top:20px; border-top:1px solid var(--line); }
+.about-facts div { display:grid; gap:4px; }
+.about-facts dt { color:var(--muted-ink); font:.58rem var(--mono); letter-spacing:.08em; text-transform:uppercase; }
+.about-facts dd { margin:0; color:var(--ink); font-size:.84rem; }
+.about-story-section { padding:100px 0 !important; border-top:1px solid var(--line); }
+.about-story-grid { display:grid; grid-template-columns:.85fr 1.15fr; gap:clamp(40px, 10vw, 160px); }
+.about-story-grid h2 { margin:18px 0 0; color:var(--ink); font:600 clamp(2.7rem, 5vw, 5rem)/.98 var(--serif); letter-spacing:-.055em; }
+.about-story-copy { display:grid; gap:22px; max-width:660px; }
+.about-story-copy p { margin:0; color:var(--muted-ink) !important; font-size:1.08rem; line-height:1.78; }
+.about-focus-section { padding:0 0 92px !important; }
+.about-section-heading { display:flex; align-items:end; justify-content:space-between; gap:40px; padding:28px 0; border-top:1px solid var(--line); }
+.about-section-heading p { max-width:430px; margin:0; color:var(--muted-ink) !important; font-size:.95rem; }
+.about-focus-grid { display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); border:1px solid var(--line); }
+.about-focus-grid article { min-height:230px; padding:23px; border-right:1px solid var(--line); transition:background .25s ease, color .25s ease; }
+.about-focus-grid article:last-child { border-right:0; }
+.about-focus-grid article:hover { background:var(--green-soft); }
+.about-focus-grid article > span { color:var(--green); font:.65rem var(--mono); }
+.about-focus-grid h3 { margin:52px 0 10px; color:var(--ink); font:600 1.55rem/1.1 var(--serif); }
+.about-focus-grid p { margin:0; color:var(--muted-ink) !important; font-size:.88rem; line-height:1.6; }
+@keyframes about-rise { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
+@media (max-width:768px) {
+    .about-page .about-hero-section { min-height:auto; padding:60px 0 54px !important; }
+    .about-hero-grid, .about-story-grid { grid-template-columns:1fr; gap:46px; }
+    .about-introduction h1 { font-size:clamp(3.4rem, 15vw, 5rem); }
+    .about-profile-card { min-height:360px; padding:24px; }
+    .about-story-section { padding:64px 0 !important; }
+    .about-section-heading { align-items:flex-start; flex-direction:column; gap:16px; }
+    .about-focus-grid { grid-template-columns:1fr 1fr; }
+    .about-focus-grid article { min-height:190px; border-bottom:1px solid var(--line); }
+    .about-focus-grid article:nth-child(2) { border-right:0; }
+    .about-focus-grid article:nth-child(n+3) { border-bottom:0; }
+    .about-focus-grid h3 { margin-top:34px; }
+}
+@media (prefers-reduced-motion: reduce) { .about-introduction, .about-profile-card { animation:none; } }
+
 .home-page .hero { padding:64px 0 58px !important; }
 .home-page .hero-container { gap:48px; }
 .home-page .hero-left h1 { font-size:clamp(2.8rem, 5.2vw, 5rem); margin:16px 0 12px; }
