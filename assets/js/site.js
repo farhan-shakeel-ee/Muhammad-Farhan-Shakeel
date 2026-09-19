@@ -171,7 +171,7 @@ function renderFooter() {
         <div class="container site-footer-inner">
             <section class="footer-brand">
                 <a class="footer-brand-name" href="index.html">${SITE.brandMarkup}</a>
-                <p>Muhammad Farhan Shakeel — Electrical Engineer and Founder of FabSCE. Building embedded and digital systems.</p>
+                <p>Muhammad Farhan Shakeel — Electrical engineering student building embedded and digital systems.</p>
                 <span class="footer-status"><i aria-hidden="true"></i> Available for selected projects</span>
             </section>
             <section class="footer-links">

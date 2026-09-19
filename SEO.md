@@ -6,7 +6,7 @@ The production URL is https://farhanshakeel-ee.netlify.app/.
 2. Add the URL-prefix property `https://farhanshakeel-ee.netlify.app/` in https://search.google.com/search-console and verify ownership using Google's HTML file or meta tag. Use the exact token Google gives you.
 3. Submit `sitemap.xml` in Search Console. Inspect the homepage and `about.html`, run the live test, and request indexing.
 4. Validate the homepage with https://search.google.com/test/rich-results after deployment. Monitor indexing in Search Console.
-5. Link to this profile from your existing LinkedIn, GitHub, and FabSCE website or official profile, where available. Keep your name and founder role consistent.
+5. Link to this profile from your existing LinkedIn, GitHub, and other relevant professional profiles, where available. Keep your name and engineering focus consistent.
 
 The sitemap lists the eight main content pages. Query-driven detail viewers are not included; no blanket noindex or canonical is applied to those viewers, so distinct items are not collapsed together.
 
