@@ -643,6 +643,24 @@ Github Project Link
 
 function buildDownloads(project){
 
+const downloads = Array.isArray(project.downloads)
+
+    ? project.downloads
+
+    : (Array.isArray(project.documents) ? project.documents : []);
+
+if(!downloads.length){
+
+    DOM.downloads.innerHTML = "";
+
+    DOM.downloads.hidden = true;
+
+    return;
+
+}
+
+DOM.downloads.hidden = false;
+
 DOM.downloads.innerHTML=
 
 `
@@ -661,7 +679,7 @@ Downloads
 
 <div class="download-grid">
 
-${project.documents.map(
+${downloads.map(
 
 file=>
 

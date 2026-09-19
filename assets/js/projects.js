@@ -405,6 +405,12 @@ function createTechnologyBadges(technologies){
 
 function createProjectStats(project){
 
+    const downloads = Array.isArray(project.downloads)
+
+        ? project.downloads
+
+        : (Array.isArray(project.documents) ? project.documents : []);
+
     return `
 
         <div class="project-info">
@@ -437,11 +443,11 @@ function createProjectStats(project){
 
                 <strong>
 
-                    ${project.documents.length}
+                    ${downloads.length}
 
                 </strong>
 
-                <small>Docs</small>
+                <small>Downloads</small>
 
             </div>
 
@@ -775,4 +781,3 @@ function updateProjects(){
     renderProjects();
 
 }
-
