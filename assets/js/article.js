@@ -4,8 +4,7 @@ const params = new URLSearchParams(window.location.search);
 const articleId = params.get("id");
 const articleRoot = document.querySelector("#articleRoot");
 
-fetch("assets/data/articles.json")
-    .then(response => response.json())
+window.portfolioData("assets/data/articles.json")
     .then(articles => {
         const article = articles.find(item => item.id === articleId) || articles[0];
         const images = Array.isArray(article.images) ? article.images : [];

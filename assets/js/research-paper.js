@@ -10,8 +10,7 @@ function sectionMarkup(section, image, index) {
     return `<section class="research-section"><h2>${section.heading}</h2>${paragraphs}${imageMarkup}</section>`;
 }
 
-fetch("assets/data/research.json")
-    .then(response => response.json())
+window.portfolioData("assets/data/research.json")
     .then(papers => {
         const paper = papers.find(item => item.id === researchId) || papers[0];
         const images = Array.isArray(paper.images) ? paper.images : [];

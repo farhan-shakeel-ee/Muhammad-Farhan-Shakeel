@@ -91,13 +91,13 @@ async function loadProject(){
 
     }
 
-    const response = await fetch(
+    const project = await window.portfolioData(
 
         `${CONFIG.ROOT}${projectID}/data.json?v=20260918`
 
     );
 
-    const project = await response.json();
+
 
     project.folder = projectID;
 
