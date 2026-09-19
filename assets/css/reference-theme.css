@@ -758,3 +758,59 @@ body.dark-mode .contact-form option { background:#111714; color:#edf3ed; }
 @media (prefers-reduced-motion:reduce) {
     .chip-signals { animation:none; }
 }
+
+/* Research covers become compact, tap-friendly rows on phones. Full paper
+   summaries and keywords remain available on the linked detail page. */
+@media (max-width:600px) {
+    .research-grid { grid-template-columns:1fr; gap:8px; }
+    .research-grid .research-card {
+        display:grid;
+        grid-template-columns:38px minmax(0, 1fr) 36px;
+        grid-template-rows:auto auto;
+        column-gap:10px;
+        align-items:center;
+        min-height:78px;
+        padding:12px !important;
+    }
+    .research-grid .research-card .timeline-date {
+        grid-column:1;
+        grid-row:1 / span 2;
+        margin:0;
+        color:var(--green);
+        font:.72rem var(--mono);
+    }
+    .research-grid .research-card .article-meta {
+        grid-column:2;
+        grid-row:1;
+        margin:0;
+        font-size:.58rem;
+        line-height:1.3;
+    }
+    .research-grid .research-card h3 {
+        display:-webkit-box;
+        grid-column:2;
+        grid-row:2;
+        margin:4px 0 0;
+        overflow:hidden;
+        color:var(--ink);
+        font-size:1rem;
+        line-height:1.2;
+        -webkit-box-orient:vertical;
+        -webkit-line-clamp:2;
+    }
+    .research-grid .research-card p,
+    .research-grid .research-card ul { display:none; }
+    .research-grid .research-card .article-link {
+        display:grid;
+        grid-column:3;
+        grid-row:1 / span 2;
+        place-items:center;
+        width:36px;
+        min-height:44px;
+        margin:0;
+        padding:0;
+        color:var(--green);
+        font-size:0;
+    }
+    .research-grid .research-card .article-link span { font-size:1.25rem; }
+}
