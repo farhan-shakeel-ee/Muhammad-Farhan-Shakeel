@@ -88,7 +88,7 @@ main > section:first-child { padding-top:90px !important; }
 .hero-left h1, section h2, .section-title h2 { color:var(--ink) !important; font-family:var(--serif) !important; letter-spacing:-.04em; line-height:1.05; }
 .hero-left h1 { font-size:clamp(3rem, 5.6vw, 5rem); margin:20px 0 14px; }
 .hero-left h1 { text-align:left; }
-.hero-left h2 { font-family:var(--sans) !important; color:#1688ff !important; font-size:clamp(1.45rem, 2.2vw, 2rem); font-weight:700; margin-bottom:18px; min-height:1.3em; }
+.hero-left h2 { font-family:var(--sans) !important; color:var(--green) !important; font-size:clamp(1.45rem, 2.2vw, 2rem); font-weight:700; margin-bottom:18px; min-height:1.3em; }
 .hero-intro { max-width:600px; color:var(--ink) !important; font-size:1.08rem; font-weight:600; line-height:1.45; margin-bottom:16px !important; }
 .hero-identity { color:var(--green); font-size:larger; font-weight:800; }
 .hero-description { max-width:560px; }

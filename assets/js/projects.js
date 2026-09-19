@@ -789,34 +789,3 @@ function updateProjects(){
 }
 
 
-
-/*==========================================================
-    IMAGE FALLBACK
-==========================================================*/
-
-document.addEventListener(
-
-"error",
-
-(event)=>{
-
-    if(
-
-        event.target.tagName==="IMG"
-
-    ){
-
-        event.target.src=
-
-        "assets/images/project-placeholder.webp";
-
-    }
-
-},
-
-true
-
-);
-
-
-

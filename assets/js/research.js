@@ -20,12 +20,12 @@ async function loadResearch() {
     researchGrid.querySelectorAll("[data-research-url]").forEach(card => {
         card.addEventListener("click", event => {
             if (event.target.closest("a")) return;
-            window.location.href = card.dataset.researchUrl;
+            card.querySelector("a").click();
         });
         card.addEventListener("keydown", event => {
             if (event.key === "Enter" || event.key === " ") {
                 event.preventDefault();
-                window.location.href = card.dataset.researchUrl;
+                card.querySelector("a").click();
             }
         });
     });

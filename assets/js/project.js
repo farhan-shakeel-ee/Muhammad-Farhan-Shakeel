@@ -143,11 +143,15 @@ function buildProject(project){
 function buildProjectVideo(project){
 
     const video = project.heroVideo || (Array.isArray(project.videos) ? project.videos[0] : "");
+    if(!video){
+        DOM.video.innerHTML = "";
+        return;
+    }
+
     const source = video ? (/^https?:\/\//.test(video) ? video : `${CONFIG.ROOT}${project.folder}/${video}`) : "";
     const extension = video.split("?")[0].split(".").pop().toLowerCase();
     const mimeType = extension === "webm" ? "video/webm" : extension === "ogv" ? "video/ogg" : "video/mp4";
     const sourceMarkup = source ? `<source src="${source}" type="${mimeType}">` : "";
-    const emptyMessage = source ? "" : `<p class="project-video-empty">Add an MP4 path in <code>heroVideo</code> inside this project's JSON to enable playback.</p>`;
 
     DOM.video.innerHTML = `
         <div class="container">
@@ -160,7 +164,6 @@ function buildProjectVideo(project){
                     ${sourceMarkup}
                     Your browser does not support embedded video.
                 </video>
-                ${emptyMessage}
             </div>
         </div>`;
 }
@@ -225,6 +228,8 @@ class="btn-primary"
 href="${project.links.github}"
 
 target="_blank"
+
+rel="noopener"
 
 >
 
@@ -667,6 +672,8 @@ href="assets/projects/${project.folder}/${file.file}"
 class="download-card"
 
 target="_blank"
+
+rel="noopener"
 
 >
 
