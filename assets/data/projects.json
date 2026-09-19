@@ -8,6 +8,10 @@
     {
       "id": "smart-home",
       "folder": "smart-home"
+    }, 
+    {
+      "id": "RTL_FIFO_Design",
+      "folder": "RTL_FIFO_Design"
     }
 
  

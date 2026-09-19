@@ -1,0 +1,113 @@
+{
+  "id": "Synchronous_FIFO",
+  "title": "Parameterized Synchronous FIFO Design",
+  "subtitle": "RTL-Based FIFO Buffer in SystemVerilog",
+  "category": [
+    "Digital Design"
+  ],
+  "featured": false,
+  "cover": "gallery/1.webp",
+  "hero": "gallery/2.webp",
+  "description": "This project implements a parameterized synchronous FIFO (First-In, First-Out) buffer using SystemVerilog. The FIFO provides temporary data storage between producer and consumer logic while maintaining the order of data. The design supports configurable data width and FIFO depth through SystemVerilog parameters, making it reusable for different applications. The FIFO uses a single clock and asynchronous reset, with independent read and write enable controls. Write and read pointers track the locations of stored data, while an additional pointer bit is used to distinguish between the full and empty conditions. The design generates full and empty status flags to prevent invalid read and write operations. Data is written into the memory array when write enable is asserted and the FIFO is not full, while data is read when read enable is asserted and the FIFO is not empty. The design demonstrates practical RTL techniques for memory-based buffering, pointer management, parameterization, and FIFO status generation.",
+  "overview": "A parameterized synchronous FIFO designed in SystemVerilog for reliable and reusable data buffering between digital logic blocks.",
+  "sections": [
+    {
+      "heading": "Introduction",
+      "paragraphs": [
+        "A synchronous FIFO was designed and implemented using SystemVerilog as a reusable RTL data-buffering module.",
+        "The FIFO stores and retrieves data in First-In, First-Out order using a single clock domain."
+      ]
+    },
+    {
+      "heading": "Objectives",
+      "paragraphs": [
+        "The main objective is to design a reliable FIFO that can temporarily store data between producer and consumer logic.",
+        "The design is parameterized to support different data widths and memory depths without changing the core RTL structure."
+      ]
+    },
+    {
+      "heading": "Architecture",
+      "paragraphs": [
+        "The FIFO consists of a memory array, write pointer, read pointer, write enable, read enable, and full and empty status flags.",
+        "An additional pointer bit is used to distinguish between the full and empty conditions when the read and write pointers have matching lower address bits."
+      ]
+    },
+    {
+      "heading": "Design & Implementation",
+      "paragraphs": [
+        "Data is written to the memory when write enable is asserted and the FIFO is not full. Data is read when read enable is asserted and the FIFO is not empty.",
+        "The FIFO uses configurable WIDTH and DEPTH parameters, allowing the same RTL design to be reused for different buffering requirements."
+      ]
+    },
+    {
+      "heading": "Simulation & Verification",
+      "paragraphs": [
+        "The FIFO can be verified by applying different sequences of write and read operations and monitoring the stored data and status flags.",
+        "Verification focuses on maintaining FIFO ordering, preventing writes when full, preventing reads when empty, and correctly handling reset."
+      ]
+    },
+    {
+      "heading": "Results & Conclusion",
+      "paragraphs": [
+        "The completed RTL design provides a compact and reusable synchronous FIFO with configurable storage capacity.",
+        "The project demonstrates practical SystemVerilog concepts including parameterization, memory arrays, pointer management, sequential logic, and full/empty flag generation."
+      ]
+    }
+  ],
+  "technologies": [
+    "SystemVerilog",
+    "RTL Design",
+    "FIFO",
+    "Sequential Logic",
+    "Memory Array",
+    "Parameterization",
+    "FSM-Free Control"
+  ],
+  "gallery": [
+    "gallery/1.webp",
+    "gallery/2.webp",
+    "gallery/3.webp",
+    "gallery/4.webp",
+    "gallery/5.webp",
+    "gallery/6.webp",
+    "gallery/7.webp",
+    "gallery/8.webp"
+  ],
+  "videos": [],
+  "documents": [],
+  "features": [
+    "Parameterized Data Width",
+    "Parameterized FIFO Depth",
+    "Synchronous FIFO Operation",
+    "Full and Empty Flags",
+    "Independent Read and Write Control",
+    "FIFO Data Ordering"
+  ],
+  "specifications": {
+    "Hardware Language": "SystemVerilog",
+    "FIFO Type": "Synchronous FIFO",
+    "Default Data Width": "8 bits",
+    "Default Depth": "32 entries",
+    "Clock": "Single Clock",
+    "Reset": "Asynchronous Reset",
+    "Storage": "Internal Memory Array"
+  },
+  "challenges": [
+    "Correctly managing read and write pointers",
+    "Distinguishing full and empty conditions",
+    "Preventing reads when the FIFO is empty",
+    "Preventing writes when the FIFO is full",
+    "Maintaining correct FIFO data ordering"
+  ],
+  "future": [
+    "Add programmable almost-full and almost-empty flags",
+    "Add occupancy or data-count monitoring",
+    "Support synchronous reset as an optional configuration",
+    "Extend the design to an asynchronous dual-clock FIFO",
+    "Add a dedicated verification testbench with assertions and coverage"
+  ],
+  "links": {
+    "github": "https://github.com/farhan-shakeel-ee/FIFO.git",
+    "demo": ""
+  }
+}
