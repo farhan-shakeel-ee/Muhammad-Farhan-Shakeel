@@ -743,7 +743,7 @@ body.dark-mode .contact-form option { background:#111714; color:#edf3ed; }
 .chip-caption { position:absolute; top:16px; left:18px; color:var(--muted-ink); font:.58rem var(--mono); letter-spacing:.14em; }
 .chip-caption-bottom { top:auto; bottom:16px; }
 .chip-traces { stroke:var(--green); stroke-width:1; opacity:.45; }
-.chip-signals { stroke:var(--green); stroke-width:2; stroke-dasharray:12 170; animation:chip-flow 7s linear infinite; }
+.chip-signals { stroke:var(--green); stroke-width:2; stroke-dasharray:12 170; animation:chip-flow 2.8s linear infinite; }
 .chip-package { fill:var(--paper); stroke:var(--green); stroke-width:1.5; }
 .chip-core { fill:var(--green-soft); stroke:var(--line); }
 .chip-label { fill:var(--ink); font:12px var(--mono); letter-spacing:1px; }

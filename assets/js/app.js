@@ -324,7 +324,7 @@ if(letter===text.length){
 
 deleting=true;
 
-setTimeout(type,1500);
+setTimeout(type,700);
 
 return;
 
@@ -346,7 +346,7 @@ setTimeout(
 
 type,
 
-deleting?40:120
+deleting?25:55
 
 );
 
@@ -622,4 +622,3 @@ animate
 animate();
 
 };
-
