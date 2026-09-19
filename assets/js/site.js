@@ -2,6 +2,7 @@
 
 const SITE = {
     brand: "Engr. FARHAN",
+    brandMarkup: '<span class="brand-prefix">Engr.</span> FARHAN',
     resume: "assets/resume/resume.pdf",
     links: [
         ["Home", "index.html"],
@@ -43,7 +44,7 @@ function renderNavigation() {
     const nav = header.querySelector(".navbar");
     if (nav) {
         const logo = nav.querySelector(".logo");
-        if (logo) logo.innerHTML = SITE.brand;
+        if (logo) logo.innerHTML = SITE.brandMarkup;
         const list = nav.querySelector(".nav-links");
         if (list) list.innerHTML = links;
         const resume = nav.querySelector(".resume-btn");
@@ -169,7 +170,7 @@ function renderFooter() {
         </div>
         <div class="container site-footer-inner">
             <section class="footer-brand">
-                <a class="footer-brand-name" href="index.html">${SITE.brand}</a>
+                <a class="footer-brand-name" href="index.html">${SITE.brandMarkup}</a>
                 <p>Muhammad Farhan Shakeel — Electrical Engineer and Founder of FabSCE. Building embedded and digital systems.</p>
                 <span class="footer-status"><i aria-hidden="true"></i> Available for selected projects</span>
             </section>

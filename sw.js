@@ -1,4 +1,4 @@
-const CACHE_NAME = "farhan-portfolio-v3";
+const CACHE_NAME = "farhan-portfolio-v12";
 
 // Small, render-critical files are installed up front. Images are added only
 // when viewed, so a first visit never downloads the full project gallery.
